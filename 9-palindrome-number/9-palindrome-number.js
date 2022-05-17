@@ -3,10 +3,10 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
-    // store x, our int, in a variable 
+    // store x, our int, in a variable, convert it to a string so that we may loop through it
     // loop through the given integer backwards
-    // push each index in this loop into a new variable
-    // after having both variables, convert the new variable to a number, then if they are equal, return true, if not, return false
+    // push each index in this loop into a new variable, starting as an empty string
+    // after having both variables, compare them, then if they are equal, return true, if not, return false
     // to validate, make sure they are the same length, and are integers, if they are not we know the result will be false and can return false
     
     // variables in which to store our results
