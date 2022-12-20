@@ -5,14 +5,14 @@
 var maxArea = function(heights) {
     // Optimized solution
     // We can use logic to figure out which pointer can change to increase the current max area, and by doing this we can bring down our O(n^2) solution to O(n), we can't use more memory to increase the speed this time, we can use a two shifting pointers technique, but with some adjustments, this time let's use a while loop
-    // In our calculation of the height, it's actually only the lesser of the values that matters at times. By checking for this, we can loop through once and then see if a pointer has to move
+    // In our calculation of the height, it's actually only the lesser of the values that matters. This is because if the height increases, it will always increase the volume or at least stay the same, because even if the width decreases, it's getting at least one higher, which makes up for the width decrease. By checking for this, we can loop through once and then see if a pointer has to move
     // Initialize the 3 values we will be using, pointers and the current max area
     let i = 0;
     let j = heights.length - 1;
     let currentMax = 0;
     // Instead of a for loop, use a while loop to go through the array from the first pointer
     while (i < j) {
-        // Let's clean this up this time by storing height and width in variables, and avoid a messy conditional by using the max method
+        // Let's clean this up this time by storing height and width in variables
         const height = Math.min(heights[i], heights[j]);
         const width = j - i;
         const area = height * width;
