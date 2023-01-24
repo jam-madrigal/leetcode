@@ -40,11 +40,11 @@ var backspaceCompare = function(a, b) {
             }
      } 
          
-      if (a[aPointer] !== b[bPointer]) {
-          return false
+      if (a[aPointer] === b[bPointer]) {
+          aPointer--;
+          bPointer--;
       } else {
-        aPointer--;
-        bPointer--;
+        return false;
       }
     }
   return true; 
