@@ -37,8 +37,7 @@ var flatten = function(head) {
         tail.next.prev = tail;
       }
       // Finish merging and delete the reference to the child, being careful of the order to nost lose references.. really helps to draw all this out step by step to make sense of it
-              currentNode.next = currentNode.child;
-
+      currentNode.next = currentNode.child;
       currentNode.next.prev = currentNode;
       currentNode.child = null;
     }
