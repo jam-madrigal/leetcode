@@ -3,6 +3,7 @@
  * @return {number}
  */
 var removeDuplicates = function(arr) {
+    // Time complexity O(n) space complexity O(1)
     // TODO: Write your code here
     // Initialize two pointers
     let left = 0;
